@@ -2,7 +2,7 @@ library(tidyverse)
 library(quantmod)
 library(lubridate)
 
-stock_df   <- readxl::read_excel("C:\\Users\\cfr45\\OneDrive\\Documents\\10-Programming\\01-R\\StockPrices\\prices.xlsx", sheet="Price")
+stock_df   <- readxl::read_excel("C:\\Users\\cfr45\\OneDrive\\Documents\\10-Programming\\01-R\\StockPrices\\stocknames.xlsx", sheet="Price")
 
 stock_df   <- stock_df %>% 
   mutate(Last=(quantmod::getQuote(Stock)[[2]])) %>% 
